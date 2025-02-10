@@ -1,0 +1,4 @@
+This is a game called Ghostbusters, created specifically for Yandex Lyceum.
+The essence of the game is to complete three levels.
+Remember, the main character is a ghost, he can pass
+through some walls. Good luck!
