@@ -49,6 +49,9 @@ about = t.render('About', font_color)
 controls = t.render('Controls', font_color)
 exit = t.render('Exit', font_color)
 main_menu = t.render('Main Menu', font_color)
+credits_font = pygame.font.Font(None, 30) # Or specify a font file
+credits_text = credits_font.render("Создатели: Ботезату Никита, Ратников Даниил", True, (255, 255, 255))
+credits_rect = credits_text.get_rect(bottomright=(WIDTH - 10, HEIGHT - 10)) # Position near bottom-right
 
 about_font = pygame.font.SysFont('Times New Roman', 20)
 with open('Data/about.txt') as f:
@@ -211,6 +214,7 @@ while running:
             p_dy *= -1
         t = Trail(p_rect.center, (220, 220, 220), win)
         trail_group.add(t)
+        win.blit(credits_text, credits_rect)
 
         if play_btn.draw(win):
             menu_click_fx.play()
@@ -383,3 +387,4 @@ while running:
     pygame.display.update()
 
 pygame.quit()
+
